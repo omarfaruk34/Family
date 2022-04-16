@@ -1,0 +1,29 @@
+
+.bradcumb {
+    padding: 120px 0 50px;
+    color: #fff;
+    h4 {
+        font-size: 35px;
+        text-transform: capitalize;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      ul {
+        display: flex;
+        li {
+            margin-right: 5px;
+            a {
+                color: #fff;
+                text-transform: capitalize;
+                font-weight: 500;
+                transition: .3s;
+                &:hover{
+                    color: tomato;
+                }
+              }
+          }
+      }
+  }
+  
+  
+  

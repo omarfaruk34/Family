@@ -1,0 +1,104 @@
+@import 'variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: $black;
+
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.bg{
+   background-position: center;
+   background-size: cover;
+//    width: 100%;
+//    height: 100%;
+   position: relative;
+   z-index: 2;
+   &.bg::before{
+       position: absolute;
+       content: "";
+       background-color: #333;
+       width: 100%;
+       height: 100%;
+       left: 0;
+       top: 0;
+       opacity: .75;
+       z-index: -1;
+   }
+}
+
+.btn{
+    display: inline-block;
+    // padding: 10px 20px;
+
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    
+    &.btn-box{
+        background-color: $btn-color;
+        padding: 10px 20px;
+        transition: .3s;
+        &:hover{
+            background-color: #333;
+        }
+    }
+    &.btn-border{
+       border: 2px solid $btn-color;
+       color: $white;
+       padding: 8px 18px;
+       transition: .3s;
+       &:hover{
+           border-color: #333;
+       }
+    }
+}
+@for $i from 1 to 12 {
+    .pt-#{$i*10}{
+        padding-top: $i * 10px;
+    }
+    .pb-#{$i*10}{
+        padding-bottom: $i * 10px;
+    } 
+    .mt-#{$i*10}{
+        margin-top: $i * 10px;
+    }
+    .mb-#{$i*10}{
+        margin-bottom: $i * 10px;
+    }
+}
+// $flex: flex,inline-flex;
+// @each $var in $flex {
+//     .d-#{$var}{
+//         display: $var;
+//     }
+// }
+// $justify: start,center,end,space-evenly,space-between,space-around;
+// @each $var in $justify {
+//     .justify-#{$var}{
+//         justify-content: $var;
+//     }
+// }
+// $align: start,center,end,space-evenly,space-between,space-around;
+// @each $var in $align {
+//     .align-#{$var}{
+//         align-items: $var;
+//     }
+// }

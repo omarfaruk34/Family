@@ -1,0 +1,44 @@
+
+.header-area{
+    margin: 15px 0;
+    position: fixed;
+     left: 0;
+    right: 0;
+   z-index: 999;
+.header {
+    display: grid;
+    grid-template-columns: 45% 50%;
+    align-items: center;
+    .logo{
+        a{
+            color: tomato;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 32px;
+            font-weight: 700;
+            font-style: italic;
+            padding-left: 10px;
+        }
+    }
+    .menu{
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            li{
+              margin-left: 20px;
+                a{
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    color: tomato;
+                    transition: .3s;
+                    &:hover{
+                        color: teal;
+                    }
+                }
+            }
+        }
+    }
+  }
+}
+ 
